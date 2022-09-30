@@ -1,9 +1,13 @@
-# Swagger-UI
+# Swagger UI
 
-Swagger Documentation
+## Problem Statement
 
-###TODO
+Create a Swagger UI to generate interactive API documentation that lets your users try out the API calls directly in the browser. 
 
-PreAuthorize is yet to b added
+## Getting Started With Solution
 
-http://localhost:8080/swagger-ui/index.html
+Now, hit the root URL : http://localhost:8080/swagger-ui/index.html in your browser after running the application. 
+
+**Congratulation! Swagger UI is created for Rest API is created successfully **
+
+
