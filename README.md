@@ -8,6 +8,6 @@ Create a Swagger UI to generate interactive API documentation that lets your use
 
 Now, hit the root URL : http://localhost:8080/swagger-ui/index.html in your browser after running the application. 
 
-**Congratulation! Swagger UI is created for Rest API is created successfully **
+**Congratulation! Swagger UI is created for Rest API is created successfully**
 
 
