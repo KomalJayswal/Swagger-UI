@@ -1,4 +1,4 @@
-package net.learning.SwaggerUI.model.response;
+package net.learning.SwaggerUI.controller.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

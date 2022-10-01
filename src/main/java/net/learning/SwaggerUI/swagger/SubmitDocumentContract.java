@@ -8,7 +8,8 @@ import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.media.Content;
 import io.swagger.v3.oas.annotations.media.Schema;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
-import net.learning.SwaggerUI.model.response.*;
+import net.learning.SwaggerUI.controller.dto.SuccessSampleResponse;
+import net.learning.SwaggerUI.model.errorResponse.*;
 
 @Operation(summary = "Submit import document", responses = {
         @ApiResponse(responseCode = "201", description = "Document Created successfully", content = @Content(schema = @Schema(implementation = SuccessSampleResponse.class))),

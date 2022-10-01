@@ -6,8 +6,78 @@ Create a Swagger UI to generate interactive API documentation that lets your use
 
 ## Getting Started With Solution
 
-Now, hit the root URL : http://localhost:8080/swagger-ui/index.html in your browser after running the application. 
+1. Build a fresh springboot Application using [Spring Initializer](https://start.spring.io). Add spring web dependency.
+2. Add pom dependencies
+```bash
+<dependency>
+	<groupId>org.springdoc</groupId>
+	<artifactId>springdoc-openapi-ui</artifactId>
+	<version>1.6.4</version>
+</dependency>
+<dependency>
+	<groupId>org.projectlombok</groupId>
+	<artifactId>lombok</artifactId>
+</dependency> 
+
+```
+3. Create a swagger annotation. Annotation name will be same as the file name. I have named it <i>SumitDoucmentContract</i> .
+
+```bash
+@Operation(summary = "Submit import document", responses = {
+        @ApiResponse(responseCode = "201", description = "Document Created successfully", content = @Content(schema = @Schema(implementation = SuccessSampleResponse.class))),
+        @ApiResponse(responseCode = "401", description = "Client_credentials authentication failed", content = @Content(schema = @Schema(implementation = FailedAuthenticationSampleResponse.class))),
+        @ApiResponse(responseCode = "403", description = "Unauthorized access", content = @Content(schema = @Schema(implementation = UnauthorizedSampleResponse.class))),
+        @ApiResponse(responseCode = "400", description = "Invalid Input", content = @Content(schema = @Schema(implementation = BadRequestSampleResponse.class))),
+        @ApiResponse(responseCode = "500", description = "Internal server error", content = @Content(schema = @Schema(implementation = InternalServerErrorSampleResponse.class))), })
+@Retention(RetentionPolicy.RUNTIME)
+@Target(ElementType.METHOD)
+public @interface SubmitDocumentContract {
+}
+```
+4. Create a Rest API by adding a controller layer
+```bash
+@RestController
+@RequestMapping("/sample")
+public class SampleAPIConroller {
+
+    @SubmitDocumentContract
+    @PostMapping("/project")
+    public ResponseEntity<SuccessSampleResponse> submitImportDocument(
+            @RequestBody @Valid SampleRequest requestPayload,
+            @RequestHeader("HeaderField1") String headerField1, @RequestHeader("HeaderField2") String headerField2){
+
+            return ResponseEntity.status(HttpStatus.OK).body(new SuccessSampleResponse());
+    }
+}
+```
+4. Add Request and Response Model as per your use case.
+
+5. Now, hit the root URL : http://localhost:8080/swagger-ui/index.html in your browser after running the application. 
 
 **Congratulation! Swagger UI is created for Rest API is created successfully**
 
+## FAQ
+
+<details>
+    <summary><I>Explain in brief about springdoc-openapi-ui ?</I></summary>
+
+* springdoc-openapi java library helps to automate the generation of API documentation using spring boot projects. 
+* springdoc-openapi works by examining an application at runtime to infer API semantics based on spring configurations, class structure and various annotations.
+* Automatically generates documentation in JSON/YAML and HTML format APIs. This documentation can be completed by comments using swagger-api annotations.
+* This library supports:
+* * OpenAPI 3
+* * Spring-boot (v1 and v2)
+* * JSR-303, specifically for @NotNull, @Min, @Max, and @Size.
+* * Swagger-ui
+* * OAuth 2
+* * GraalVM native images
+
+</details>
+
+<details>
+    <summary><I>What is the use of Lombok dependency ? </I></summary>
+
+Lombok is used to reduce boilerplate code for model/data objects, e.g., it can generate getters and setters for those object automatically by using Lombok annotations. The easiest way is to use the @Data annotation.
+
+</details>
 

@@ -1,4 +1,4 @@
-package net.learning.SwaggerUI.model.response;
+package net.learning.SwaggerUI.model.errorResponse;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -9,7 +9,7 @@ import lombok.NoArgsConstructor;
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
-public class UnauthorizedSampleResponse {
+public class InternalServerErrorSampleResponse {
 
     private String timestamp;
     private String status;

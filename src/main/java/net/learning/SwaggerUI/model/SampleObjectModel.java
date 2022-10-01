@@ -1,4 +1,4 @@
-package net.learning.SwaggerUI.model.request;
+package net.learning.SwaggerUI.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

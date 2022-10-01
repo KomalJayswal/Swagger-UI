@@ -1,11 +1,11 @@
-package net.learning.SwaggerUI.model.request;
+package net.learning.SwaggerUI.controller.dto;
 
 import java.util.List;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import net.learning.SwaggerUI.model.request.SampleObjectModel;
+import net.learning.SwaggerUI.model.SampleObjectModel;
 
 @Data
 @Builder
