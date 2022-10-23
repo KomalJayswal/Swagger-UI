@@ -20,7 +20,48 @@ Create a Swagger UI to generate interactive API documentation that lets your use
 </dependency> 
 
 ```
-3. Create a swagger annotation. Annotation name will be same as the file name. I have named it <i>SumitDoucmentContract</i> .
+3. Execute `mvn clean install`
+4. Add Request Model and , Response Model of Success and Error.
+
+```bash
+@Builder
+@Getter
+@Setter
+public class SampleRequest {
+
+    private String request;
+}
+```
+
+```bash
+@Builder
+@Getter
+@Setter
+@AllArgsConstructor
+@NoArgsConstructor
+public class SuccessSampleResponse {
+
+    private String response;
+}
+```
+
+```bash
+@Builder
+@Getter
+@Setter
+@AllArgsConstructor
+@NoArgsConstructor
+public class BadRequestSampleResponse {
+
+    private String httpMethod;
+    private String requestUri;
+    private String errorTimestamp;
+    private String error;
+}
+```
+Similarly you can create other error response models.
+
+5. Create a swagger annotation. Annotation name will be same as the file name. So, I have created an interface and named it <i>SumitDoucmentContract</i>. 
 
 ```bash
 @Operation(summary = "Submit import document", responses = {
@@ -34,7 +75,7 @@ Create a Swagger UI to generate interactive API documentation that lets your use
 public @interface SubmitDocumentContract {
 }
 ```
-4. Create a Rest API by adding a controller layer
+6. Create a Rest API by adding a controller layer
 ```bash
 @RestController
 @RequestMapping("/sample")
@@ -50,9 +91,9 @@ public class SampleAPIConroller {
     }
 }
 ```
-4. Add Request and Response Model as per your use case.
+7. Add Request and Response Model as per your use case.
 
-5. Now, hit the root URL : http://localhost:8080/swagger-ui/index.html in your browser after running the application. 
+8. Now, hit the root URL : http://localhost:8080/swagger-ui/index.html in your browser after running the application. 
 
 **Congratulation! Swagger UI is created for Rest API is created successfully**
 
