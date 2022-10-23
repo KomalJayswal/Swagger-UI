@@ -24,9 +24,10 @@ Create a Swagger UI to generate interactive API documentation that lets your use
 4. Add Request Model and , Response Model of Success and Error.
 
 ```bash
+@Data
 @Builder
-@Getter
-@Setter
+@AllArgsConstructor
+@NoArgsConstructor
 public class SampleRequest {
 
     private String request;
@@ -34,9 +35,8 @@ public class SampleRequest {
 ```
 
 ```bash
+@Data
 @Builder
-@Getter
-@Setter
 @AllArgsConstructor
 @NoArgsConstructor
 public class SuccessSampleResponse {
@@ -46,9 +46,8 @@ public class SuccessSampleResponse {
 ```
 
 ```bash
+@Data
 @Builder
-@Getter
-@Setter
 @AllArgsConstructor
 @NoArgsConstructor
 public class BadRequestSampleResponse {
