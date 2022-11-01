@@ -131,26 +131,26 @@ Lombok is used to reduce boilerplate code for model/data objects, e.g., it can g
 <details>
     <summary><I>What are the usage of following dependencies ? </I></summary>
 
-@Data : https://javabydeveloper.com/lombok-data-annotation/
-@Builder : https://javabydeveloper.com/lombok-builder-examples/
-@AllArgsConstructor : https://javabydeveloper.com/lombok-allargsconstructor-examples/
-@NoArgsConstructor : https://javabydeveloper.com/lombok-noargsconstructor-examples/
+<br> * @Data : https://javabydeveloper.com/lombok-data-annotation/ 
+<br> * @Builder : https://javabydeveloper.com/lombok-builder-examples/
+* @AllArgsConstructor : https://javabydeveloper.com/lombok-allargsconstructor-examples/
+* @NoArgsConstructor : https://javabydeveloper.com/lombok-noargsconstructor-examples/
 
-@Operation : https://github.com/swagger-api/swagger-core/wiki/Swagger-2.X---Annotations#operation-annotations
-@ApiResponse : https://github.com/swagger-api/swagger-core/wiki/Swagger-2.X---Annotations#apiresponse
-@Content : https://github.com/swagger-api/swagger-core/wiki/Swagger-2.X---Annotations#content
-@Schema : https://github.com/swagger-api/swagger-core/wiki/Swagger-2.X---Annotations#schema
+* @Operation : https://github.com/swagger-api/swagger-core/wiki/Swagger-2.X---Annotations#operation-annotations
+* @ApiResponse : https://github.com/swagger-api/swagger-core/wiki/Swagger-2.X---Annotations#apiresponse
+* @Content : https://github.com/swagger-api/swagger-core/wiki/Swagger-2.X---Annotations#content
+* @Schema : https://github.com/swagger-api/swagger-core/wiki/Swagger-2.X---Annotations#schema
 	
-@Target	: 
-@Retention : 
-@interface : 
+* @Target : 
+* @Retention : 
+* @interface : 
 	
-@RestController :
-@RequestMapping :
-@PostMapping :
-@RequestBody :
-@Valid :
-@RequestHeader :
+* @RestController :
+* @RequestMapping :
+* @PostMapping :
+* @RequestBody :
+* @Valid :
+* @RequestHeader :
 
 </details>
 
