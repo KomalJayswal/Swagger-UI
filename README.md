@@ -154,3 +154,10 @@ Lombok is used to reduce boilerplate code for model/data objects, e.g., it can g
 
 </details>
 
+<details>
+    <summary><I>What is ResponseEntity in Java ? </I></summary>
+
+ResponseEntity represents the whole HTTP response: status code, headers, and body. As a result, we can use it to fully configure the HTTP response. If we want to use it, we have to return it from the endpoint; Spring takes care of the rest. ResponseEntity is a generic type.
+
+</details>
+
