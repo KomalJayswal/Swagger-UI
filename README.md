@@ -12,13 +12,24 @@ Create a Swagger UI to generate interactive API documentation that lets your use
 <dependency>
 	<groupId>org.springdoc</groupId>
 	<artifactId>springdoc-openapi-ui</artifactId>
-	<version>1.6.4</version>
+	<version>1.6.14</version>
 </dependency>
 <dependency>
 	<groupId>org.projectlombok</groupId>
 	<artifactId>lombok</artifactId>
 </dependency> 
-
+```
+For Reactive application, you can use below pom dependency
+```bash
+<dependency>
+    <groupId>org.springdoc</groupId>
+    <artifactId>springdoc-openapi-webflux-ui</artifactId>
+<version>1.6.14</version>
+</dependency>
+<dependency>
+	<groupId>org.projectlombok</groupId>
+	<artifactId>lombok</artifactId>
+</dependency> 
 ```
 3. Execute `mvn clean install`
 4. Add Request Model and , Response Model of Success and Error.
