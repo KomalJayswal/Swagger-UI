@@ -114,6 +114,15 @@ If you want the Swagger YAML file for the previously constructed Swagger UI, fol
 
 **Congratulation! On Right side is the same Swagger UI and on the left side is you have your Json Swagger Code for YAML File ready.**
 
+For webflux, use `spring openapi starter ui` dependency
+```
+   <dependency>
+      <groupId>org.springdoc</groupId>
+      <artifactId>springdoc-openapi-starter-webmvc-ui</artifactId>
+      <version>2.0.2</version>
+   </dependency>
+```
+
 ## FAQ
 
 <details>
