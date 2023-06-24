@@ -151,26 +151,90 @@ Lombok is used to reduce boilerplate code for model/data objects, e.g., it can g
 <details>
     <summary><I>What are the usage of following dependencies ? </I></summary>
 
-<br> * @Data : https://javabydeveloper.com/lombok-data-annotation/ 
-<br> * @Builder : https://javabydeveloper.com/lombok-builder-examples/
-<br> * @AllArgsConstructor : https://javabydeveloper.com/lombok-allargsconstructor-examples/
-<br> * @NoArgsConstructor : https://javabydeveloper.com/lombok-noargsconstructor-examples/
-<br> 
-<br> * @Operation : https://github.com/swagger-api/swagger-core/wiki/Swagger-2.X---Annotations#operation-annotations
-<br> * @ApiResponse : https://github.com/swagger-api/swagger-core/wiki/Swagger-2.X---Annotations#apiresponse
-<br> * @Content : https://github.com/swagger-api/swagger-core/wiki/Swagger-2.X---Annotations#content
-<br> * @Schema : https://github.com/swagger-api/swagger-core/wiki/Swagger-2.X---Annotations#schema
-<br> 	
-<br> * @Target : 
-<br> * @Retention : 
-<br> * @interface : 
-<br> 	
-<br> * @RestController :
-<br> * @RequestMapping :
-<br> * @PostMapping :
-<br> * @RequestBody :
-<br> * @Valid :
-<br> * @RequestHeader :
+The dependencies you mentioned are annotations commonly used in Java frameworks like Spring Boot, specifically in the context of building RESTful web services. Here's an explanation of each annotation and its usage:
+
+@Data:
+
+Provided by the Lombok library, it generates boilerplate code for getter, setter, toString, equals, and hashCode methods.
+It reduces the amount of code required for data objects and improves code readability.
+
+@Builder:
+
+Also from Lombok, it generates a builder pattern for constructing objects.
+It provides a convenient way to create instances with a fluent API, reducing the verbosity of traditional constructors.
+
+@AllArgsConstructor:
+
+Another Lombok annotation, it generates a constructor with parameters for all fields in a class.
+It saves developers from writing boilerplate code for constructors when all fields need to be initialized.
+
+@NoArgsConstructor:
+
+This Lombok annotation generates a no-argument constructor.
+It is useful when objects need to be created without explicitly passing any arguments.
+@Operation:
+
+It is part of the Springfox library used for documenting RESTful APIs with Swagger.
+It represents an API operation or endpoint and allows specifying details like the operation's HTTP method, summary, and description.
+
+@ApiResponse:
+
+Also used with Swagger, it describes a possible response from an API operation.
+It includes details like response codes, descriptions, and example payloads.
+
+@Content:
+
+This Swagger annotation specifies the content or media type of an API response or request body.
+It is used to define the format of the data being sent or received, such as JSON or XML.
+
+@Schema:
+
+It is another Swagger annotation used for defining the structure and properties of a data model or object.
+It allows specifying details like data types, validation rules, and documentation for the schema.
+
+@Target:
+
+A built-in Java annotation used to specify where another annotation can be applied.
+It determines the types of Java elements (classes, fields, methods, etc.) on which the annotation can be used.
+
+@Retention:
+
+This Java annotation is used to specify how long an annotation should be retained.
+It determines whether the annotation should be available only during compilation (SOURCE), at runtime (RUNTIME), or in the compiled bytecode (CLASS).
+@interface:
+
+It is a keyword in Java used to declare an annotation type.
+It defines a new custom annotation that can be used in code.
+
+@RestController:
+
+This annotation is part of the Spring framework and is used to define a RESTful controller class.
+It combines the functionality of the @Controller and @ResponseBody annotations, indicating that the class handles requests and returns response data.
+
+@RequestMapping:
+
+Another Spring annotation used to map a request URL or URI to a controller method.
+It defines the endpoint or route for a specific HTTP request method (e.g., GET, POST, PUT, DELETE).
+
+@PostMapping:
+
+A specific variant of the @RequestMapping annotation used to map HTTP POST requests to a controller method.
+It is commonly used when defining endpoints for creating or adding new resources.
+
+@RequestBody:
+
+This annotation is used to bind the request body to a method parameter in a controller method.
+It indicates that the method parameter should be populated with the content of the HTTP request body.
+
+@Valid:
+
+It is used for validating method parameters or fields within a class.
+When applied to a parameter or field, it triggers validation according to the specified validation rules or annotations.
+
+@RequestHeader:
+
+This annotation is used to map a request header value to a method parameter in a controller method.
+It is typically used to extract values from HTTP request headers and bind them to method parameters for further processing.
 
 </details>
 
