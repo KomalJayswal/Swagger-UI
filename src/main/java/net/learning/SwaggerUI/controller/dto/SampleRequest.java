@@ -1,6 +1,8 @@
 package net.learning.SwaggerUI.controller.dto;
 
 import java.util.List;
+
+import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -12,7 +14,7 @@ import net.learning.SwaggerUI.model.SampleObjectModel;
 @AllArgsConstructor
 @NoArgsConstructor
 public class SampleRequest {
-
+    @Schema(description = "It is field 1")
     private String field1;
     private String field2;
     private SampleObjectModel nestedSampleObjectModel;
